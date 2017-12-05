@@ -15,7 +15,7 @@ przez 7". Uwzględnij brak podania liczby.-->
         <input type="submit" value="Sprawdź to">
     </form>
     <?php
-    
+
     ?>
 </body>
 </html>
