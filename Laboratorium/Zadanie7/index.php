@@ -1,14 +1,14 @@
 <DOCTYPE html>
 <html lang ="pl">
-<!--Napisz skrypt, który poprosi o podanie pewnej liczby (w polu formularza) i
-w zależności od jej wartości wyświetli odpowiednią ilość gwiazdek w
-układzie zgodnym z poniższym:
-    *
-    *
-    *
-    *
-Uwzględnij wartość minimalną i maksymalną. Skrypt musi uwzględniać
-brak podania liczby.-->
+<!--Napisz skrypt, który poprosi o wymiar tablicy jednowymiarowej, następnie
+poprosi o podanie znaku specjalnego i wyświetli tablicę. Proszę ustalić
+wartość min i max wymiaru tablicy. Wynik ma być zgodny ze wzorem.
+        nr  wartosc
+        1   *
+        2   *
+        3   *
+        4   *
+-->
 
 <head>   
 </head>

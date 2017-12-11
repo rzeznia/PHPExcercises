@@ -3,10 +3,10 @@
 <!--Napisz skrypt, który poprosi o podanie pewnej liczby (w polu formularza) i
 w zależności od jej wartości wyświetli odpowiednią ilość gwiazdek w
 układzie zgodnym z poniższym:
-    *
-    *
-    *
-    *
+    *****
+    *****
+    *****
+    *****
 Uwzględnij wartość minimalną i maksymalną. Skrypt musi uwzględniać
 brak podania liczby.-->
 
