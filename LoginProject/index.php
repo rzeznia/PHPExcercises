@@ -11,7 +11,14 @@
         <input type="submit" value="Zaloguj">
     </form>
     <?php
-
+        session_start();
+        if(isset($_SESSION['error']))
+            echo $_SESSION['error'];
+        if(isset($_SESSION['isloggedin'])&&($_SESSION['isloggedin'] == true))
+        {    
+            header('Location: info.php');    
+            exit();
+        }
     ?>
 </body>
 </html>
