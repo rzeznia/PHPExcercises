@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once "db_data.php";
-    if((!isset($_POST['login'])) || (!isset($_POST['haslo'])));
+    if((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
     {
         $_SESSION['error'] = '<span style="color:red">Podano nieprawiłowe dane logowania</span>';
         header('Location: index.php');
@@ -9,6 +9,10 @@
     }
    $login = $_POST['login'];
    $haslo = $_POST['haslo'];
+   $login = htmlentities($login, ENT_QUOTES, "UTF-8");
+   $haslo = htmlentities($haslo, ENT_QUOTES, "UTF-8");
+   echo $login;
+   echo $haslo;
    if($login == null || $haslo == null)
    {
        echo "W formlualrzu wsytąpił błąd";
@@ -19,8 +23,10 @@
        echo $connection->connect_errno;
    }else
    {
-        $sql = "SELECT * FROM uzytkownicy WHERE user = '$login' AND pass = '$haslo'";
-        if($result = @$connection->query($sql))
+        if($result = @$connection->query(
+            sprintf("SELECT * FROM uzytkownicy WHERE user = '%s' AND pass = '%s'",
+            mysqli_real_escape_string($connection,$login),
+            mysqli_real_escape_string($connection,$haslo))))
         {
             $numOfUsers = $result->num_rows;
             if($numOfUsers > 0)
