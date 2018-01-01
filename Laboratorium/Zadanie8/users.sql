@@ -1,5 +1,6 @@
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE IF NOT EXISTS users 
+(
 `id` int(11) NOT NULL,
   `user` text COLLATE utf8_polish_ci NOT NULL,
   `pass` text COLLATE utf8_polish_ci NOT NULL
@@ -8,7 +9,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Zrzut danych tabeli `uzytkownicy`
 --
 
-INSERT INTO `uzytkownicy` (`id`, `user`, `pass`) VALUES
+INSERT INTO users (id, user, pass) 
+VALUES
+(
 (1, 'adam', 'qwerty'),
 (2, 'marek', 'asdfg'),
 (3, 'anna', 'zxcvb'),
@@ -18,8 +21,8 @@ INSERT INTO `uzytkownicy` (`id`, `user`, `pass`) VALUES
 (7, 'beata', 'fgthj'),
 (8, 'jakub', 'ertyu'),
 (9, 'janusz', 'cvbnm'),
-(10, 'roman', 'dfghj');
-
+(10, 'roman', 'dfghj')
+)
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -27,18 +30,3 @@ INSERT INTO `uzytkownicy` (`id`, `user`, `pass`) VALUES
 --
 -- Indexes for table `uzytkownicy`
 --
-ALTER TABLE `uzytkownicy`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT dla tabeli `uzytkownicy`
---
-ALTER TABLE `uzytkownicy`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
