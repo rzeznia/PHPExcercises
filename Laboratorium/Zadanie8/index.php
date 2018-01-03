@@ -26,15 +26,13 @@
 
     <?php
         SESSION_START();
-        if(isset($SESSION['error']))
+        if(isset($_SESSION['error']))
         {
-            echo $SESSION['error'];
-            echo $SESSION['error1'];
+            echo $_SESSION['error'];
+            echo "<br/>";
+            echo $_SESSION['error1'];
         }
 
     ?>
-        
-        
-
 </body>
 </html>
